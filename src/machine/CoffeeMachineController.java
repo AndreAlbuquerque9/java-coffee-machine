@@ -10,7 +10,7 @@ public class CoffeeMachineController {
     private int disposableCups;
     private int money;
 
-    private Scanner scanner;
+    final private Scanner scanner;
 
     public CoffeeMachineController() {
         water = 400;
@@ -23,6 +23,7 @@ public class CoffeeMachineController {
     }
 
     public void printStatus() {
+
         System.out.printf("%nThe coffee machine has:%n" +
                 "%d of water%n" +
                 "%d of milk%n" +
@@ -46,7 +47,7 @@ public class CoffeeMachineController {
     }
 
     public Coffee coffeeType() {
-        int coffeeType = 0;
+        int coffeeType;
 
         System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");
         coffeeType = scanner.nextInt();
